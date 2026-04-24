@@ -5,14 +5,15 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <p class="logo">Pip</p>
+    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/">Главная</RouterLink>
+        <RouterLink to="/about">О нас</RouterLink>
+        <RouterLink to="/profile">Профиль</RouterLink>
+        <RouterLink to="/pin">Опубликовать пин</RouterLink>
       </nav>
     </div>
   </header>
@@ -24,6 +25,7 @@ import HelloWorld from './components/HelloWorld.vue'
 header {
   line-height: 1.5;
   max-height: 100vh;
+  width: 100%;
 }
 
 .logo {
@@ -33,9 +35,9 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 nav a.router-link-exact-active {
@@ -60,7 +62,8 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    justify-content: space-between;
+    /* padding-right: calc(var(--section-gap) / 2); */
   }
 
   .logo {
@@ -69,17 +72,20 @@ nav a:first-of-type {
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    
+    /* justify-content: center; */
+    /* place-items: flex-start; */
+    /* flex-wrap: wrap; */
   }
 
   nav {
-    text-align: left;
+    justify-content: center;
+    /* text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
+    margin-top: 1rem; */
   }
 }
 </style>
